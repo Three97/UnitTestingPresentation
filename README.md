@@ -1,12 +1,23 @@
 # C# Unit Testing
 
+Presentations about unit testing in C#.
+
+## Introduction
+
 Presentation about unit testing with C#, answering questions like
+
 * What is unit testing?
 * What benefits does unit testing provide?
 * What are some drawbacks to unit testing?
 * Why should we implement unit testing?
 * Pros and cons of unit testing
   * like anything else, there are tradeoffs, but the benefits of good unit tests far outweigh not having them
+
+## First Follow-Up
+
+This presentation was shaped by audience questions during/after the first presentation. Crowd-Sourced Content if you will.
+
+
 
 ### References
 
