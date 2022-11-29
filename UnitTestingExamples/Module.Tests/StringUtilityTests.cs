@@ -1,3 +1,5 @@
+using System.Diagnostics.CodeAnalysis;
+
 namespace Module.Tests;
 
 /// <summary>
@@ -7,22 +9,23 @@ namespace Module.Tests;
 /// but one is more terse than the other, but the terse method
 /// shows 100% coverage whereas the longer method shows 80%.
 /// </summary>
+[ExcludeFromCodeCoverage]
 public class StringUtilityTests
 {
-    private StringUtility UnitUnderTest = new StringUtility();
+    private StringUtility _unitUnderTest = new();
     
     [SetUp]
     public void Setup()
     {
-        this.UnitUnderTest = new StringUtility();
+        this._unitUnderTest = new StringUtility();
     }
 
     public class IsStringLongV1 : StringUtilityTests
     {
         [Test]
-        public void IfStringIsLessThanFiveCharacters_ReturnsTrue()
+        public void IfStringIsLessThanFiveCharacters_ReturnsFalse()
         {
-            var actual = base.UnitUnderTest.IsLongStringV1("abc");
+            var actual = base._unitUnderTest.IsLongStringV1("abc");
             
             Assert.That(actual, Is.False);
         }
@@ -31,9 +34,9 @@ public class StringUtilityTests
     public class IsStringLongV2 : StringUtilityTests
     {
         [Test]
-        public void IfStringIsLessThanFiveCharacters_ReturnsTrue()
+        public void IfStringIsLessThanFiveCharacters_ReturnsFalse()
         {
-            var actual = base.UnitUnderTest.IsLongStringV2("abc");
+            var actual = base._unitUnderTest.IsLongStringV2("abc");
             
             Assert.That(actual, Is.False);
         }
